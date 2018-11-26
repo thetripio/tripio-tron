@@ -139,8 +139,8 @@ contract('TripioRoomNightCustomer', async(accounts) => {
 
     it("Roon night infomation", async() => {
         var result = await customerInstance.roomNightsOfOwner(0, 2, false);
-        let rnid0 = result[0][0].toNumber();
-        let rnid1 = result[0][1].toNumber();
+        let rnid0 = (result[0][0]).toNumber();
+        let rnid1 = (result[0][1]).toNumber();
         
         result = await customerInstance.roomNight(rnid0);
         assert.equal(result._vendorId, 1);
